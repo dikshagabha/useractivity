@@ -1,0 +1,7 @@
+[client]
+database = UserActivity
+user = root
+password = 
+default-character-set = utf8mb4
+HOST= localhost, 
+PORT: 3306,
