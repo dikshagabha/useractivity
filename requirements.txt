@@ -1,0 +1,17 @@
+# Core Django packages
+Django>=4.2,<5.0
+
+# Django REST Framework for APIs
+djangorestframework>=3.14
+
+# JWT authentication support
+djangorestframework-simplejwt>=5.2
+
+# Database
+mysqlclient>=2.2
+# Testing and code quality
+pytest>=8.0
+pytest-django>=4.8
+pytest-mock>=3.12
+
+
