@@ -7,6 +7,7 @@ from .permissions import IsOwnerOrAdmin
 from django.utils.dateparse import parse_datetime
 from django.db.models import Q
 
+# API to create a new user activity log (auto-attaches request.user)
 class CreateActivityLogView(generics.CreateAPIView):
     queryset = UserActivityLog.objects.all()
     serializer_class = UserActivityLogSerializer
@@ -15,7 +16,7 @@ class CreateActivityLogView(generics.CreateAPIView):
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
 
-
+# API to list logs for a specific user (only accessible by that user or admin)
 class UserActivityLogListView(generics.ListAPIView):
     serializer_class = UserActivityLogSerializer
     permission_classes = [permissions.IsAuthenticated]
@@ -26,7 +27,7 @@ class UserActivityLogListView(generics.ListAPIView):
             return UserActivityLog.objects.none()
         return UserActivityLog.objects.filter(user__id=user_id)
 
-
+# API to list all logs with optional filtering by action and timestamp range
 class AllActivityLogView(generics.ListAPIView):
     serializer_class = UserActivityLogSerializer
     permission_classes = [permissions.IsAuthenticated]
@@ -44,7 +45,7 @@ class AllActivityLogView(generics.ListAPIView):
                 pass
         return queryset
 
-
+# API to update the status of a specific activity log (PATCH only)
 class UpdateActivityStatusView(generics.UpdateAPIView):
     queryset = UserActivityLog.objects.all()
     serializer_class = UserActivityLogSerializer
