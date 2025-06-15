@@ -1,10 +1,10 @@
-# 📊 Django Advanced User Activity Log
+#  Django Advanced User Activity Log
 
 A Django app to log and track advanced user activity with rich metadata, filtering, and caching support. Includes RESTful APIs, custom model manager, caching, and CI/CD integration.
 
 ---
 
-## 🏗 Features
+##  Features
 
 - User activity logging (`LOGIN`, `LOGOUT`, etc.)
 - Rich metadata with JSON storage
@@ -16,7 +16,7 @@ A Django app to log and track advanced user activity with rich metadata, filteri
 
 ---
 
-## 🧰 Tech Stack
+## Tech Stack
 
 - Django 4+
 - Django REST Framework
@@ -26,7 +26,7 @@ A Django app to log and track advanced user activity with rich metadata, filteri
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 🔧 Setup Locally
 
@@ -38,7 +38,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 🔧 Environment Setup
+### Environment Setup
 In settings.py update:
 
 ```env
