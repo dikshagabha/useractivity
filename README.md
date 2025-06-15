@@ -28,7 +28,7 @@ A Django app to log and track advanced user activity with rich metadata, filteri
 
 ## Getting Started
 
-### 🔧 Setup Locally
+### Setup Locally
 
 ```bash
 git clone https://github.com/<your-username>/useractivitylog.git
